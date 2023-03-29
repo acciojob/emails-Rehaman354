@@ -35,7 +35,7 @@ public class Workspace extends Gmail{
                int res= o1.getEndTime().compareTo(o2.getEndTime());
                if(res==0)
                {
-                   return  o1.getStartTime().compareTo(o2.getStartTime());;
+                   return  o1.getStartTime().compareTo(o2.getStartTime());
                }
                return res;
             }
