@@ -33,7 +33,7 @@ public class Gmail extends Email {
         {
             trash.add(inbox.removeFirst());
         }
-        inbox.add(new Mail(date,sender,message));
+        inbox.addLast(new Mail(date,sender,message));
     }
 
     public void deleteMail(String message){
@@ -49,7 +49,7 @@ public class Gmail extends Email {
                 break;
             }
         }
-        if(found==true)
+        if(found)
         {
             trash.add(inbox.remove(count));
         }
@@ -105,6 +105,6 @@ public class Gmail extends Email {
 
     public int getInboxCapacity() {
         // Return the maximum number of mails that can be stored in the inbox
-        return getInboxCapacity();
+        return this.inboxCapacity;
     }
 }
