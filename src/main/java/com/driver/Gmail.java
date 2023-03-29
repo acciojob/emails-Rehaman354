@@ -77,7 +77,8 @@ public class Gmail extends Email {
         int count=0;
         while(iterator.hasNext())
         {
-            if(iterator.next().date.compareTo(start)>=0 && iterator.next().date.compareTo(end)<=0 ) {
+            Mail m=iterator.next();
+            if(m.date.compareTo(start)>=0 && m.date.compareTo(end)<=0 ) {
                 count++;
             }
         }
